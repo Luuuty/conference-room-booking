@@ -1,0 +1,9 @@
+target-version = "py312"
+line-length = 88
+
+[lint]
+select = ["E", "F", "I"]
+
+[lint.per-file-ignores]
+# Keep the requested Django models import in empty application scaffolds.
+"accounts/models.py" = ["F401"]
